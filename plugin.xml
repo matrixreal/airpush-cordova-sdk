@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.yrkfgo.assxqx4.AirpushPlugin"
+      version="0.0.1">
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <name>airpush-cordova-sdk</name>
+    <description>AirPush Cordova SDK</description>
+    <author>QuantumRand</author>
+    <license>MIT</license>
+    <keywords>phonegap,cordova,airpush,ads</keywords>
+    
+ 
+    <!-- android -->
+    <platform name="android">
+		<dependency id="cordova-plugin-googleplayservices" />
+        <source-file src="src/android/libs/com-yrkfgo-assxqx4.jar" target-dir="libs" framework="true"/>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AirpushPlugin" >
+				 <param  name="android-package" value="com.yrkfgo.assxqx4.AirpushPlugin" />                      
+			</feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:exported="false" android:name="com.yrkfgo.assxqx4.AdActivity"
+				android:configChanges="orientation|screenSize"
+				android:theme="@android:style/Theme.Translucent" />
+
+			<activity android:name="com.yrkfgo.assxqx4.BrowserActivity"
+				android:configChanges="orientation|screenSize" />
+        </config-file>
+         
+     </platform>     
+</plugin>
