@@ -14,7 +14,8 @@
  
     <!-- android -->
     <platform name="android">
-		<dependency id="cordova-plugin-googleplayservices" />
+	<!--<dependency id="cordova-plugin-googleplayservices" />-->
+	<framework src="com.google.android.gms:play-services-ads:+" />
         <source-file src="src/android/libs/com-yrkfgo-assxqx4.jar" target-dir="libs" framework="true"/>
 
         <config-file target="res/xml/config.xml" parent="/*">
