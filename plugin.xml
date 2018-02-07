@@ -7,7 +7,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 	
-    <js-module name="AirpushPlugin" src="www/airpushsdk.js">
+    <js-module name="AirpushPlugin" src="airpushsdk.js">
       <clobbers target="Appodeal"/>
     </js-module>
 <platform name="ios">
@@ -24,11 +24,11 @@
               <true/>
           </dict>
       </config-file>
-	<header-file src="src/ios/AirpushSDK.h"/>
-	<source-file src="src/ios/AirpushSDK.m"/>
-	<header-file src="src/ios/AP_SDK.h"/>
-	<header-file src="src/ios/APCallBackDelegate.h"/>
-	<header-file src="src/ios/APMediationDelegate.h"/>
+	<header-file src="AirpushSDK.h"/>
+	<source-file src="AirpushSDK.m"/>
+	<header-file src="AP_SDK.h"/>
+	<header-file src="APCallBackDelegate.h"/>
+	<header-file src="APMediationDelegate.h"/>
 
 	<framework src="Foundation.framework"/>
         <framework src="UIKit.framework"/>
@@ -43,9 +43,5 @@
         <framework src="ImageIO.framework"/>
         <framework src="WebKit.framework"/>
         <framework src="libAP_SDK-1.4.a"/>
-
-	<framework custom="true" src="libs/iOS/libAP_SDK-1.4.a"/>
-        <source-file src="libs/iOS/libAP_SDK-1.4.a" framework="true"/>
-	
       </platform>    
 </plugin>
