@@ -1,17 +1,16 @@
 {
-  "name": "cordova-plugin-ad-chartboost",
-  "version": "1.0.83",
+  "name": "cordova-plugin-airpushsdk",
+  "version": "1.0.0",
   "description": "Show chartboost interstitial (static interstitial, video interstial), more apps, rewarded video ad",
   "cordova": {
-    "id": "cordova-plugin-ad-chartboost",
+    "id": "cordova-plugin-airpushsdk",
     "platforms": [
-      "android",
       "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cranberrygame/cordova-plugin-ad-chartboost.git"
+    "url": "git+https://github.com/matrixreal/airpush-cordova-sdk"
   },
   "keywords": [
     "cordova",
@@ -30,10 +29,10 @@
       "version": ">=3.0.0"
     }
   ],
-  "author": "cranberrygame",
+  "author": "%ATRIXREAL",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cranberrygame/cordova-plugin-ad-chartboost/issues"
+    "url": "https://github.com/matrixreal/airpush-cordova-sdk/issues"
   },
-  "homepage": "https://github.com/cranberrygame/cordova-plugin-ad-chartboost#readme"
+  "homepage": "https://github.com/matrixreal/airpush-cordova-sdk"
 }
