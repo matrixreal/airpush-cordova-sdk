@@ -42,6 +42,6 @@
         <framework src="CoreTelephony.framework"/>
         <framework src="ImageIO.framework"/>
         <framework src="WebKit.framework"/>
-        <framework src="libAP_SDK-1.4.a"/>
-      </platform>    
+	<framework custom="true" src="libAP_SDK-1.4.a"/>
+</platform>    
 </plugin>
