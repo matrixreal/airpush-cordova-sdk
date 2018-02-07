@@ -10,14 +10,41 @@
     <js-module name="AirpushPlugin" src="www/airpushsdk.js">
       <clobbers target="Appodeal"/>
     </js-module>
-    <platform name="ios">
-	<framework src="com.google.android.gms:play-services-ads:+" />
-        <source-file src="src/android/libs/com-yrkfgo-assxqx4.jar" target-dir="libs" framework="true"/>
+<platform name="ios">
+      <config-file parent="/widget" target="config.xml">
+        <feature name="AirpushPlugin">
+          <param name="ios-package" value="AirpushPlugin"/>
+        </feature>
+      </config-file>
+      <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+          <dict>
+              <key>NSAllowsArbitraryLoads</key>
+              <true/>
+              <key>NSAllowsArbitraryLoadsInWebContent</key>
+              <true/>
+          </dict>
+      </config-file>
+	<header-file src="src/ios/AirpushSDK.h"/>
+	<source-file src="src/ios/AirpushSDK.m"/>
+	<header-file src="src/ios/AP_SDK.h"/>
+	<header-file src="src/ios/APCallBackDelegate.h"/>
+	<header-file src="src/ios/APMediationDelegate.h"/>
 
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AirpushPlugin" >
-				 <param  name="android-package" value="com.yrkfgo.assxqx4.AirpushPlugin" />                      
-			</feature>
-        </config-file>
-     </platform>     
+	<framework src="Foundation.framework"/>
+        <framework src="UIKit.framework"/>
+        <framework src="CoreText.framework"/>
+        <framework src="AvFoundation.framework"/>
+        <framework src="MessageUI.framework"/>
+        <framework src="CoreMedia.framework"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="CFNetwork.framework"/>
+	<framework src="AdSupport.framework"/>
+        <framework src="CoreTelephony.framework"/>
+        <framework src="ImageIO.framework"/>
+        <framework src="WebKit.framework"/>
+        <framework src="libAP_SDK-1.4.a"/>
+
+	<framework custom="true" src="libs/iOS/libAP_SDK-1.4.a"/>
+        <source-file src="libs/iOS/libAP_SDK-1.4.a" framework="true"/>
+      </platform>    
 </plugin>
