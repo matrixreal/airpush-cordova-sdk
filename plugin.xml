@@ -46,5 +46,6 @@
 
 	<framework custom="true" src="libs/iOS/libAP_SDK-1.4.a"/>
         <source-file src="libs/iOS/libAP_SDK-1.4.a" framework="true"/>
+	
       </platform>    
 </plugin>
